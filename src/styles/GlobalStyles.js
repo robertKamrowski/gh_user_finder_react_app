@@ -42,6 +42,14 @@ ${({ theme }) => css`
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 2.5rem;
+  }
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: ${theme.background};
   }
 `}

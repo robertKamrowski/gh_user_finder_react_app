@@ -1,6 +1,8 @@
 const theme = {
   lightTheme: {
     background: '#F6F8FF',
+    toggleThemeButton: '#4B6A9B',
+    appTitle: '#222731',
     contentBackground: '#FEFEFE',
     accountName: '#2B3442',
     joinDate: '#697C9A',
@@ -10,10 +12,13 @@ const theme = {
     ghInfoNumbers: '#2B3442',
     ghContacts: '#4B6A9B',
     blue: '#0079FF',
+    font: 'Space Mono',
   },
 
   darkTheme: {
     background: '#141D2F',
+    toggleThemeButton: '#FFFFFF',
+    appTitle: '#FFFFFF',
     contentBackground: '#1E2A47',
     accountName: '#FFFFFF',
     joinDate: '#FFFFFF',
@@ -23,6 +28,7 @@ const theme = {
     ghInfoNumbers: '#FFFFFF',
     ghContacts: '#FFFFFF',
     blue: '#0079FF',
+    font: 'Space Mono',
   },
 };
 
