@@ -2,6 +2,7 @@ const theme = {
   lightTheme: {
     background: '#F6F8FF',
     toggleThemeButton: '#4B6A9B',
+
     appTitle: '#222731',
     contentBackground: '#FEFEFE',
     accountName: '#2B3442',
@@ -13,6 +14,7 @@ const theme = {
     ghContacts: '#4B6A9B',
     blue: '#0079FF',
     font: 'Space Mono',
+    toggleThemeHover: '#222731',
   },
 
   darkTheme: {
@@ -29,6 +31,7 @@ const theme = {
     ghContacts: '#FFFFFF',
     blue: '#0079FF',
     font: 'Space Mono',
+    toggleThemeHover: '#90A4D4',
   },
 };
 
