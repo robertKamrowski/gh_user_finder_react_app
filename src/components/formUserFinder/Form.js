@@ -70,10 +70,11 @@ const Button = styled.button`
 `;
 
 const Form = () => {
-  const { inputValue, handleInputChange } = useContext(SearchContext);
+  const { inputValue, handleInputChange, handleFormSubmit } =
+    useContext(SearchContext);
 
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleFormSubmit}>
       <Img src={searchIcon} alt="Search Icon" />
       <Input
         type="text"

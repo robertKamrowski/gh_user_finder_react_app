@@ -2,7 +2,6 @@ const theme = {
   lightTheme: {
     background: '#F6F8FF',
     toggleThemeButton: '#4B6A9B',
-
     appTitle: '#222731',
     contentBackground: '#FEFEFE',
     accountName: '#2B3442',
