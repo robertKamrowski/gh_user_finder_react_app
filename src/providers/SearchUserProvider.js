@@ -3,7 +3,7 @@ export const SearchContext = createContext();
 
 const SearchUserProvider = ({ children }) => {
   // * Controlled input component :
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('helloroman');
   const [userGitHubData, setUserGitHubData] = useState({});
 
   const handleInputChange = (e) => {
