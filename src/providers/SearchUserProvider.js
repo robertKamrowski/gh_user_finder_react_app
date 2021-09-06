@@ -23,7 +23,7 @@ const SearchUserProvider = ({ children }) => {
           if (response.ok) {
             return response.json();
           } else {
-            setUserGitHubData({});
+            setUserGitHubData({ errorMessage: 'No Results' });
             throw new Error('Error');
           }
         })

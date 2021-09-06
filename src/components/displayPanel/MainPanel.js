@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import UserMainInfo from './UserMainInfo';
 import UserDescription from './UserDescription';
 import AccountDetails from './AccountDetails';
 import AccountLinks from './AccountLinks';
+import { SearchContext } from '../../providers/SearchUserProvider';
+import NoResults from './NoResults';
 
 const MainPanelWrapper = styled.main`
   width: 100%;
@@ -16,12 +18,21 @@ const MainPanelWrapper = styled.main`
 `;
 
 const MainPanel = () => {
+  const { userGitHubData } = useContext(SearchContext);
+  const { errorMessage } = userGitHubData;
+
   return (
     <MainPanelWrapper>
-      <UserMainInfo />
-      <UserDescription />
-      <AccountDetails />
-      <AccountLinks />
+      {errorMessage ? (
+        <NoResults />
+      ) : (
+        <>
+          <UserMainInfo />
+          <UserDescription />
+          <AccountDetails />
+          <AccountLinks />
+        </>
+      )}
     </MainPanelWrapper>
   );
 };
