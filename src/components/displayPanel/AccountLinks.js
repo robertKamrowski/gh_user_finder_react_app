@@ -56,7 +56,6 @@ const AccountLinks = () => {
   const { location, blog = '', twitter, company } = userGitHubData;
 
   const link = blog;
-
   const handleLink = () => {
     if (link.includes('https://')) return link;
     else if (link.includes('http://'))
@@ -64,16 +63,22 @@ const AccountLinks = () => {
     else return `https://${link}`;
   };
 
-  const openNewTab = (url = 'https://google.com') => {
-    const win = window.open(url, '_blank');
-    win.focus();
+  const openNewTab = (url = 'https://google.com', searchTerm) => {
+    if (searchTerm) {
+      window.open(`${url}/search?q=${searchTerm}`, '_blank').focus();
+    } else {
+      window.open(url, '_blank').focus();
+    }
   };
 
   handleLink();
 
   return (
     <LinksWrapper>
-      <StyledButton disabled={location ? false : true}>
+      <StyledButton
+        disabled={location ? false : true}
+        onClick={() => openNewTab(undefined, location)}
+      >
         <svg
           className="svg"
           height="20"
@@ -105,7 +110,10 @@ const AccountLinks = () => {
         <Content available={blog}>{blog ? blog : 'Not Available'}</Content>
       </StyledButton>
 
-      <StyledButton disabled={twitter ? false : true}>
+      <StyledButton
+        disabled={twitter ? false : true}
+        onClick={() => openNewTab(undefined, twitter)}
+      >
         <svg
           className="svg"
           height="18"
@@ -118,7 +126,10 @@ const AccountLinks = () => {
         <Content>{twitter ? twitter : 'Not Available'}</Content>
       </StyledButton>
 
-      <StyledButton disabled={company ? false : true}>
+      <StyledButton
+        disabled={company ? false : true}
+        onClick={() => openNewTab(undefined, company)}
+      >
         <svg
           className="svg"
           height="20"
