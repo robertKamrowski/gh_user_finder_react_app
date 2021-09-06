@@ -14,6 +14,7 @@ const theme = {
     blue: '#0079FF',
     font: 'Space Mono',
     toggleThemeHover: '#222731',
+    disabled: '#ccc',
   },
 
   darkTheme: {
@@ -31,6 +32,7 @@ const theme = {
     blue: '#0079FF',
     font: 'Space Mono',
     toggleThemeHover: '#90A4D4',
+    disabled: '#ccc',
   },
 };
 

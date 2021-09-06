@@ -48,6 +48,8 @@ const JoinDate = styled.p`
 const UserMainInfo = () => {
   const { userGitHubData } = useContext(SearchContext);
 
+  const { avatar_url, name, html_url, login } = userGitHubData;
+
   const getUserJoinDate = () => {
     const date = new Date(userGitHubData.created_at).toDateString();
     let date1 = date.split(' ');
@@ -57,13 +59,11 @@ const UserMainInfo = () => {
 
   return (
     <UserMainInfoWrapper>
-      <Img src={userGitHubData.avatar_url} alt="User's avatar image." />
+      <Img src={avatar_url} alt="User's avatar image." />
       <UserBasicInfoWrapper>
-        <AccountName>
-          {!userGitHubData.name ? 'No account name' : userGitHubData.name}
-        </AccountName>
-        <AccountLink target="_blank" href={userGitHubData.html_url}>
-          {`@${userGitHubData.login}`}
+        <AccountName>{!name ? 'No account name' : name}</AccountName>
+        <AccountLink target="_blank" href={html_url}>
+          {`@${login}`}
         </AccountLink>
         <JoinDate>{getUserJoinDate()}</JoinDate>
       </UserBasicInfoWrapper>
