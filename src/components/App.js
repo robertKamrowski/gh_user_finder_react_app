@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Header from '../components/header/Header';
 import Form from './formUserFinder/Form';
-import SearchUserProvider from '../providers/SearchUserProvider';
 import MainPanel from '../components/displayPanel/MainPanel';
+import { SearchContext } from '../providers/SearchUserProvider';
+import EntranceComponent from './EntranceComponent';
 
 const AppWrapper = styled.div`
   width: 327px;
@@ -11,13 +12,14 @@ const AppWrapper = styled.div`
 `;
 
 const App = () => {
+  const { firstTimeOpenApp } = useContext(SearchContext);
+
   return (
     <AppWrapper>
+      {firstTimeOpenApp ? <EntranceComponent /> : null}
       <Header />
-      <SearchUserProvider>
-        <Form />
-        <MainPanel />
-      </SearchUserProvider>
+      <Form />
+      <MainPanel />
     </AppWrapper>
   );
 };

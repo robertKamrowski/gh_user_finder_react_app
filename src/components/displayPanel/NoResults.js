@@ -23,17 +23,26 @@ const Wrapper = styled.div`
   }
 `;
 
+const ImgWrapper = styled.div`
+  padding: 30px 20px;
+  background-color: red;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: ${({ theme }) => theme.ghInfoBackground};
+`;
+
 const ErrorImg = styled.img`
   display: block;
   width: 250px;
-  margin-top: 30px;
 `;
 
 const NoResults = () => {
   return (
     <Wrapper>
       <h2>No Results Found</h2>
-      <ErrorImg src={errorIcon} alt="Error icon" />
+      <ImgWrapper>
+        <ErrorImg src={errorIcon} alt="Error icon" />
+      </ImgWrapper>
       <p>Make sure you've typed username correctly.</p>
     </Wrapper>
   );

@@ -3,7 +3,7 @@ export const SearchContext = createContext();
 
 const SearchUserProvider = ({ children }) => {
   // * Controlled input component :
-  const [inputValue, setInputValue] = useState('helloroman');
+  const [inputValue, setInputValue] = useState('');
   const [userGitHubData, setUserGitHubData] = useState({});
 
   const handleInputChange = (e) => {
@@ -11,7 +11,6 @@ const SearchUserProvider = ({ children }) => {
   };
   // * _____________________________________________
 
-  // form submit here and api shot :
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -37,11 +36,19 @@ const SearchUserProvider = ({ children }) => {
     }
   };
 
+  // handle display entrance component:
+  const [firstTimeOpenApp, setFirstTimeOpenApp] = useState(true);
+  const handleCloseEntranceComponent = () => {
+    setFirstTimeOpenApp((prevValue) => !prevValue);
+  };
+
   const value = {
     inputValue,
     handleInputChange,
     handleFormSubmit,
     userGitHubData,
+    firstTimeOpenApp,
+    handleCloseEntranceComponent,
   };
   return (
     <SearchContext.Provider value={value}>{children}</SearchContext.Provider>

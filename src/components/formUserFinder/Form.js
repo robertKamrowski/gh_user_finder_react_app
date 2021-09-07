@@ -30,7 +30,7 @@ const Input = styled.input`
   width: 184px;
   font-family: Space Mono;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 25px;
   color: ${({ theme }) => theme.toggleThemeButton};
   border: none;
