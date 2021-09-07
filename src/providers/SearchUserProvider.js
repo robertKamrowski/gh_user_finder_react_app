@@ -20,6 +20,7 @@ const SearchUserProvider = ({ children }) => {
           if (response.ok) {
             return response.json();
           } else {
+            setFirstTimeOpenApp(false);
             setUserGitHubData({ errorMessage: 'No Results' });
             throw new Error('Error');
           }
