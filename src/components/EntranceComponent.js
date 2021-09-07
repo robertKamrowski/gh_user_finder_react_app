@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { SearchContext } from '../providers/SearchUserProvider';
 import styled from 'styled-components';
 import searchIcon from '../assets/icon-search.svg';
 
@@ -76,11 +77,17 @@ const Button = styled.button`
 `;
 
 const EntranceComponent = () => {
+  const { handleFormSubmit, handleInputChange } = useContext(SearchContext);
+
   return (
     <PopupFormWrapper>
-      <Form>
+      <Form onSubmit={handleFormSubmit}>
         <Img src={searchIcon} alt="Search Icon" />
-        <Input type="text" placeholder="Search GitHub Username" />
+        <Input
+          type="text"
+          placeholder="Search GitHub Username"
+          onChange={handleInputChange}
+        />
         <Button>Search</Button>
       </Form>
     </PopupFormWrapper>
