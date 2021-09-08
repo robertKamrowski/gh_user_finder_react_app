@@ -9,7 +9,7 @@ import NoResults from './NoResults';
 
 const MainPanelWrapper = styled.main`
   width: 100%;
-  min-height: 17px;
+  /* min-height: 517px; */
   margin-top: 16px;
   background-color: ${({ theme }) => theme.contentBackground};
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
@@ -19,6 +19,11 @@ const MainPanelWrapper = styled.main`
   @media (min-width: 768px) {
     padding: 40px;
     min-height: 481px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 48px;
+    min-height: 440px;
   }
 `;
 

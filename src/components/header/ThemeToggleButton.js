@@ -32,6 +32,11 @@ const StyledButton = styled.button`
       font-size: 1.3rem;
     }
   }
+  @media (min-width: 1440px) {
+    span {
+      font-size: 1.6rem;
+    }
+  }
 `;
 
 const ThemeToggleButton = () => {

@@ -37,7 +37,7 @@ const Input = styled.input`
   position: absolute;
   height: 25px;
   left: 13.76%;
-  top: calc(50% - 25px / 2 + 0.5px);
+  top: calc(50% - 25px / 2);
   width: 184px;
   font-family: Space Mono;
   font-weight: normal;
@@ -56,9 +56,14 @@ const Input = styled.input`
   }
 
   @media (min-width: 768px) {
-    width: 254px;
+    width: 360px;
     top: calc(50% - 25px / 2);
     font-size: 1.8rem;
+  }
+
+  @media (min-width: 1440px) {
+    left: 10.96%;
+    width: 520px;
   }
 `;
 
@@ -92,6 +97,10 @@ const Button = styled.button`
     height: 50px;
     font-size: 1.6rem;
     line-height: 2.4rem;
+  }
+
+  @media (min-width: 1440px) {
+    left: 84.11%;
   }
 `;
 

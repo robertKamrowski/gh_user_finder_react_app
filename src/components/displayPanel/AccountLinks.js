@@ -12,26 +12,30 @@ const LinksWrapper = styled.div`
   align-items: flex-start;
 
   @media (min-width: 768px) {
-    height: 63px;
+    display: block;
+    position: relative;
+    height: 75px;
     width: 493px;
-    position: absolute;
-    display: unset;
     flex-direction: unset;
     justify-content: unset;
     align-items: unset;
   }
+
+  @media (min-width: 1440px) {
+    margin-left: 154px;
+    width: 480px;
+  }
 `;
 
 const StyledButton = styled.button`
-  font-size: 1.3rem;
-  line-height: 1.9rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: transparent;
   border: none;
   font-family: 'Space Mono';
-  cursor: pointer;
   color: ${({ theme }) => theme.ghContacts};
+  cursor: pointer;
 
   .svg {
     width: 20px;
@@ -54,12 +58,8 @@ const StyledButton = styled.button`
   }
 
   @media (min-width: 768px) {
-    max-width: 50%;
     width: 50%;
-    height: 20px;
     justify-content: flex-start;
-    align-items: center;
-    margin-left: 0;
     position: absolute;
 
     &:nth-child(1) {
@@ -71,12 +71,12 @@ const StyledButton = styled.button`
       left: 0;
     }
     &:nth-child(3) {
-      right: 0;
       top: 0;
+      left: calc(50% + 40px);
     }
     &:nth-child(4) {
       bottom: 0;
-      right: 0;
+      left: calc(50% + 40px);
     }
   }
   .svg {
@@ -90,6 +90,8 @@ const Content = styled.p`
   margin-left: 10px;
   font-size: 1.3rem;
   line-height: 1.9rem;
+  height: 19px;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     font-size: 1.5rem;

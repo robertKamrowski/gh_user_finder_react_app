@@ -41,6 +41,13 @@ const UserBasicInfoWrapper = styled.div`
     height: 91px;
     margin-left: 41px;
   }
+
+  @media (min-width: 1440px) {
+    align-self: flex-start;
+    justify-content: unset;
+    position: relative;
+    height: 69px;
+  }
 `;
 
 const AccountName = styled.h3`
@@ -64,6 +71,11 @@ const AccountLink = styled.a`
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+
+  @media (min-width: 1440px) {
+    margin-top: 10px;
+    font-size: 1.8rem;
+  }
 `;
 
 const JoinDate = styled.p`
@@ -74,6 +86,13 @@ const JoinDate = styled.p`
   @media (min-width: 768px) {
     font-size: 1.5rem;
     line-height: 2.2rem;
+  }
+
+  @media (min-width: 1440px) {
+    align-self: flex-end;
+    position: absolute;
+    top: 5px;
+    right: 0;
   }
 `;
 

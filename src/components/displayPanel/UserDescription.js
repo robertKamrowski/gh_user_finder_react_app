@@ -12,6 +12,11 @@ const StyledParagraph = styled.p`
     font-size: 1.5rem;
     margin-top: 24px;
   }
+
+  @media (min-width: 1440px) {
+    margin-top: -30px;
+    margin-left: 154px;
+  }
 `;
 
 const UserDescription = () => {

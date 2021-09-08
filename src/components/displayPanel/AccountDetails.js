@@ -16,6 +16,11 @@ const Wrapper = styled.div`
     margin-top: 32px;
     padding: 16px 32px;
   }
+
+  @media (min-width: 1440px) {
+    margin-left: 154px;
+    width: 480px;
+  }
 `;
 
 const AccountDetails = () => {

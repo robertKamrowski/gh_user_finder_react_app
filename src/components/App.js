@@ -12,6 +12,10 @@ const AppWrapper = styled.div`
   @media (min-width: 768px) {
     width: 573px;
   }
+
+  @media (min-width: 1440px) {
+    width: 730px;
+  }
 `;
 
 const App = () => {
