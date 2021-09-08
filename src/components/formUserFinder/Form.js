@@ -11,6 +11,10 @@ const StyledForm = styled.form`
   border-radius: 15px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   position: relative;
+
+  @media (min-width: 768px) {
+    height: 69px;
+  }
 `;
 
 const Img = styled.img`
@@ -20,6 +24,13 @@ const Img = styled.img`
   height: 20px;
   left: 16px;
   top: 20px;
+
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+    top: 23px;
+    left: 32px;
+  }
 `;
 
 const Input = styled.input`
@@ -42,6 +53,12 @@ const Input = styled.input`
 
   &::placeholder {
     color: ${({ theme }) => theme.toggleThemeButton};
+  }
+
+  @media (min-width: 768px) {
+    width: 254px;
+    top: calc(50% - 25px / 2);
+    font-size: 1.8rem;
   }
 `;
 
@@ -66,6 +83,15 @@ const Button = styled.button`
 
   &:hover {
     background-color: #60abff;
+  }
+
+  @media (min-width: 768px) {
+    width: 106px;
+    left: 79.76%;
+    top: 13.77%;
+    height: 50px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 `;
 

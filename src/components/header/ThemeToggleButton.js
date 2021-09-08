@@ -26,6 +26,12 @@ const StyledButton = styled.button`
     letter-spacing: 1px;
     font-family: ${({ theme }) => theme.font};
   }
+
+  @media (min-width: 768px) {
+    span {
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 const ThemeToggleButton = () => {

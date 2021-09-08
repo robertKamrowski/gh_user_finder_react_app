@@ -21,6 +21,16 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
     margin-top: 20px;
   }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 1.6rem;
+    }
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -34,6 +44,10 @@ const ImgWrapper = styled.div`
 const ErrorImg = styled.img`
   display: block;
   width: 250px;
+
+  @media (min-width: 768px) {
+    width: 300px;
+  }
 `;
 
 const NoResults = () => {

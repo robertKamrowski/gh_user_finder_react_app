@@ -7,16 +7,18 @@ const StyledParagraph = styled.p`
   font-size: 1.3rem;
   line-height: 25px;
   color: ${({ theme }) => theme.accountDescription};
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 24px;
+  }
 `;
 
 const UserDescription = () => {
   const { userGitHubData } = useContext(SearchContext);
   const { bio } = userGitHubData;
 
-  const content = !bio
-    ? `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-Quisque volutpat mattis eros.`
-    : bio;
+  const content = !bio ? `This profile has no bio.` : bio;
 
   return <StyledParagraph>{content}</StyledParagraph>;
 };

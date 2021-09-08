@@ -7,12 +7,25 @@ const UserMainInfoWrapper = styled.div`
   width: 100%;
   height: 70px;
   display: flex;
+
+  @media (min-width: 768px) {
+    min-width: 334px;
+    height: 117px;
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 const Img = styled.img`
+  display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
+
+  @media (min-width: 768px) {
+    width: 117px;
+    height: 117px;
+  }
 `;
 
 const UserBasicInfoWrapper = styled.div`
@@ -23,6 +36,11 @@ const UserBasicInfoWrapper = styled.div`
   flex-grow: 1;
   height: 70px;
   margin-left: 19px;
+
+  @media (min-width: 768px) {
+    height: 91px;
+    margin-left: 41px;
+  }
 `;
 
 const AccountName = styled.h3`
@@ -30,19 +48,33 @@ const AccountName = styled.h3`
   font-weight: bold;
   line-height: 2.4rem;
   color: ${({ theme }) => theme.accountName};
+
+  @media (min-width: 768px) {
+    font-size: 2.6rem;
+  }
 `;
 
 const AccountLink = styled.a`
+  display: block;
   font-size: 1.3rem;
   line-height: 1.9rem;
   color: ${({ theme }) => theme.blue};
-  display: block;
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
 `;
 
 const JoinDate = styled.p`
   font-size: 1.3rem;
   line-height: 1.9rem;
   color: ${({ theme }) => theme.joinDate};
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
 `;
 
 const UserMainInfo = () => {

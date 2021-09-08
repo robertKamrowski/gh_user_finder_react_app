@@ -11,6 +11,11 @@ const Wrapper = styled.div`
   border-radius: 10px;
   padding: 18.5px 14.5px;
   display: flex;
+
+  @media (min-width: 768px) {
+    margin-top: 32px;
+    padding: 16px 32px;
+  }
 `;
 
 const AccountDetails = () => {

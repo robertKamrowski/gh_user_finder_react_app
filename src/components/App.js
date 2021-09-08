@@ -8,7 +8,10 @@ import EntranceComponent from './EntranceComponent';
 
 const AppWrapper = styled.div`
   width: 327px;
-  background-color: transparent;
+
+  @media (min-width: 768px) {
+    width: 573px;
+  }
 `;
 
 const App = () => {

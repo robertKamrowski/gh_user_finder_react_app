@@ -10,10 +10,19 @@ const LinksWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (min-width: 768px) {
+    height: 63px;
+    width: 493px;
+    position: absolute;
+    display: unset;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+  }
 `;
 
 const StyledButton = styled.button`
-  display: block;
   font-size: 1.3rem;
   line-height: 1.9rem;
   display: flex;
@@ -43,12 +52,49 @@ const StyledButton = styled.button`
   &:disabled .svg {
     fill: ${({ theme }) => theme.disabled};
   }
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+    width: 50%;
+    height: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2) {
+      bottom: 0;
+      left: 0;
+    }
+    &:nth-child(3) {
+      right: 0;
+      top: 0;
+    }
+    &:nth-child(4) {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .svg {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 const Content = styled.p`
-  margin-left: 20px;
+  text-align: left;
+  margin-left: 10px;
   font-size: 1.3rem;
   line-height: 1.9rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
 `;
 
 const AccountLinks = () => {

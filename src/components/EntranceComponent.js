@@ -29,11 +29,20 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 768px) {
+    width: 500px;
+    min-height: 300px;
+  }
 `;
 
 const Img = styled.img`
   display: block;
   width: 30px;
+
+  @media (min-width: 768px) {
+    width: 40px;
+  }
 `;
 
 const Input = styled.input`
@@ -55,6 +64,12 @@ const Input = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme.toggleThemeButton};
   }
+
+  @media (min-width: 768px) {
+    width: 300px;
+    font-size: 1.8rem;
+    margin: 45px;
+  }
 `;
 
 const Button = styled.button`
@@ -73,6 +88,13 @@ const Button = styled.button`
 
   &:hover {
     background-color: #60abff;
+  }
+
+  @media (min-width: 768px) {
+    width: 136px;
+    height: 60px;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 `;
 
