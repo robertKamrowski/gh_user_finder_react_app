@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/gh_user_finder_react_app/static/js/main.1ea13210.chunk.js",
+    "main.js.map": "/gh_user_finder_react_app/static/js/main.1ea13210.chunk.js.map",
+    "runtime-main.js": "/gh_user_finder_react_app/static/js/runtime-main.a1c8bf4b.js",
+    "runtime-main.js.map": "/gh_user_finder_react_app/static/js/runtime-main.a1c8bf4b.js.map",
+    "static/js/2.21939131.chunk.js": "/gh_user_finder_react_app/static/js/2.21939131.chunk.js",
+    "static/js/2.21939131.chunk.js.map": "/gh_user_finder_react_app/static/js/2.21939131.chunk.js.map",
+    "index.html": "/gh_user_finder_react_app/index.html",
+    "static/js/2.21939131.chunk.js.LICENSE.txt": "/gh_user_finder_react_app/static/js/2.21939131.chunk.js.LICENSE.txt",
+    "static/media/icon-search.0cc0c984.svg": "/gh_user_finder_react_app/static/media/icon-search.0cc0c984.svg",
+    "static/media/search-error 1.fed7f6d1.svg": "/gh_user_finder_react_app/static/media/search-error 1.fed7f6d1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a1c8bf4b.js",
+    "static/js/2.21939131.chunk.js",
+    "static/js/main.1ea13210.chunk.js"
+  ]
+}
