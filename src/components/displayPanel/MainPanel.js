@@ -9,7 +9,6 @@ import NoResults from './NoResults';
 
 const MainPanelWrapper = styled.main`
   width: 100%;
-  /* min-height: 517px; */
   margin-top: 16px;
   background-color: ${({ theme }) => theme.contentBackground};
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
@@ -28,8 +27,9 @@ const MainPanelWrapper = styled.main`
 `;
 
 const MainPanel = () => {
-  const { userGitHubData } = useContext(SearchContext);
-  const { errorMessage } = userGitHubData;
+  const {
+    userGitHubData: { errorMessage },
+  } = useContext(SearchContext);
 
   return (
     <MainPanelWrapper>

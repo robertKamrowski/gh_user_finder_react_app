@@ -20,8 +20,9 @@ const StyledParagraph = styled.p`
 `;
 
 const UserDescription = () => {
-  const { userGitHubData } = useContext(SearchContext);
-  const { bio } = userGitHubData;
+  const {
+    userGitHubData: { bio },
+  } = useContext(SearchContext);
 
   const content = !bio ? `This profile has no bio.` : bio;
 

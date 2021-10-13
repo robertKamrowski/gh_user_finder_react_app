@@ -100,8 +100,9 @@ const Content = styled.p`
 `;
 
 const AccountLinks = () => {
-  const { userGitHubData } = useContext(SearchContext);
-  const { location, blog = '', twitter, company } = userGitHubData;
+  const {
+    userGitHubData: { location, blog = '', twitter, company },
+  } = useContext(SearchContext);
 
   const link = blog;
   const handleLink = () => {

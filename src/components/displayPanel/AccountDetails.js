@@ -24,8 +24,9 @@ const Wrapper = styled.div`
 `;
 
 const AccountDetails = () => {
-  const { userGitHubData } = useContext(SearchContext);
-  const { public_repos, followers, following } = userGitHubData;
+  const {
+    userGitHubData: { public_repos, followers, following },
+  } = useContext(SearchContext);
 
   return (
     <Wrapper>

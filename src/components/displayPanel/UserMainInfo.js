@@ -97,12 +97,12 @@ const JoinDate = styled.p`
 `;
 
 const UserMainInfo = () => {
-  const { userGitHubData } = useContext(SearchContext);
-
-  const { avatar_url, name, html_url, login } = userGitHubData;
+  const {
+    userGitHubData: { avatar_url, name, html_url, login, created_at },
+  } = useContext(SearchContext);
 
   const getUserJoinDate = () => {
-    const date = new Date(userGitHubData.created_at).toDateString();
+    const date = new Date(created_at).toDateString();
     let date1 = date.split(' ');
     date1.splice(0, 1);
     return `Joined ${date1.join(' ')}`;

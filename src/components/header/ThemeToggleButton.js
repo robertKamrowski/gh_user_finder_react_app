@@ -6,7 +6,7 @@ const StyledButton = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => theme.toggleThemeButton};
+  color: ${({ theme: { toggleThemeButton } }) => toggleThemeButton};
   width: 78px;
   height: 20px;
   text-transform: uppercase;
@@ -16,15 +16,15 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme }) => theme.toggleThemeHover};
+    color: ${({ theme: { toggleThemeHover } }) => toggleThemeHover};
     .svg-path {
-      fill: ${({ theme }) => theme.toggleThemeHover};
+      fill: ${({ theme: { toggleThemeHover } }) => toggleThemeHover};
     }
   }
 
   span {
     letter-spacing: 1px;
-    font-family: ${({ theme }) => theme.font};
+    font-family: ${({ theme: { font } }) => font};
   }
 
   @media (min-width: 768px) {
